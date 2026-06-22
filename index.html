@@ -8,210 +8,263 @@
 </head>
 <body>
 
-    <header>
-        <h1>🥗 NutriFit AI</h1>
-        <p>Personalized Diet & Fitness Recommendation System</p>
-    </header>
+<header>
+    <h1>🥗 NutriFit AI</h1>
+    <p>Personalized Diet & Fitness Recommendation System</p>
+</header>
 
-    <div class="container">
+<div class="container">
 
-        <!-- PERSONAL INFORMATION -->
+    <!-- PERSONAL INFORMATION -->
 
-        <section class="profile-section">
+    <section class="profile-section">
 
-            <h2>👤 Personal Information</h2>
+        <h2>👤 Personal Information</h2>
 
-            <label for="userName">Full Name</label>
-            <input type="text" id="userName" placeholder="Enter your name">
+        <label for="userName">Full Name</label>
+        <input type="text" id="userName" placeholder="Enter your name">
 
-            <label for="age">Age</label>
-            <input type="number" id="age" placeholder="Enter age">
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="Enter age">
 
-            <label for="gender">Gender</label>
-            <select id="gender">
-                <option value="">Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
+        <label for="gender">Gender</label>
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
 
-            <label for="height">Height (cm)</label>
-            <input type="number" id="height" placeholder="Enter height">
+        <label for="height">Height (cm)</label>
+        <input type="number" id="height" placeholder="Enter height">
 
-            <label for="weight">Weight (kg)</label>
-            <input type="number" id="weight" placeholder="Enter weight">
+        <label for="weight">Weight (kg)</label>
+        <input type="number" id="weight" placeholder="Enter weight">
 
-        </section>
+    </section>
 
-        <!-- FITNESS INFORMATION -->
+    <!-- FITNESS INFORMATION -->
 
-        <section class="fitness-section">
+    <section class="fitness-section">
 
-            <h2>🏋️ Fitness Information</h2>
+        <h2>🏋️ Fitness Information</h2>
 
-            <label for="bodyType">Body Type</label>
-            <select id="bodyType">
-                <option value="">Select Body Type</option>
-                <option value="ectomorph">Ectomorph (Hard Gainer)</option>
-                <option value="mesomorph">Mesomorph (Athletic)</option>
-                <option value="endomorph">Endomorph (Easy Weight Gain)</option>
-            </select>
+        <label for="bodyType">Body Type</label>
+        <select id="bodyType">
+            <option value="">Select Body Type</option>
+            <option value="ectomorph">Ectomorph (Hard Gainer)</option>
+            <option value="mesomorph">Mesomorph (Athletic)</option>
+            <option value="endomorph">Endomorph (Easy Weight Gain)</option>
+        </select>
 
-            <label for="goal">Fitness Goal</label>
-            <select id="goal">
-                <option value="">Select Goal</option>
-                <option value="weight_loss">Weight Loss</option>
-                <option value="maintain">Maintain Weight</option>
-                <option value="weight_gain">Weight Gain</option>
-                <option value="muscle_gain">Muscle Gain</option>
-            </select>
+        <label for="goal">Fitness Goal</label>
+        <select id="goal">
+            <option value="">Select Goal</option>
+            <option value="weight_loss">Weight Loss</option>
+            <option value="maintain">Maintain Weight</option>
+            <option value="weight_gain">Weight Gain</option>
+            <option value="muscle_gain">Muscle Gain</option>
+        </select>
 
-            <label for="gym">Do You Go To Gym?</label>
-            <select id="gym">
-                <option value="">Select</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
+        <label for="gym">Do You Go To Gym?</label>
+        <select id="gym">
+            <option value="">Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
 
-            <label for="exerciseType">Activity Level</label>
-            <select id="exerciseType">
-                <option value="">Select Activity</option>
-                <option value="walking">Walking</option>
-                <option value="running">Running</option>
-                <option value="aerobics">Aerobics</option>
-                <option value="yoga">Yoga</option>
-                <option value="strength_training">Strength Training</option>
-            </select>
+        <h3>🏃 Exercise Types (Select All That Apply)</h3>
 
-            <label for="workoutDays">Workout Days Per Week</label>
-            <input type="number" id="workoutDays" min="0" max="7">
+        <div class="checkbox-group">
 
-        </section>
+            <label><input type="checkbox" class="exercise" value="walking"> Walking</label>
 
-        <!-- TARGET WEIGHT -->
+            <label><input type="checkbox" class="exercise" value="running"> Running</label>
 
-        <section>
+            <label><input type="checkbox" class="exercise" value="aerobics"> Aerobics</label>
 
-            <h2>🎯 Goal Tracking</h2>
+            <label><input type="checkbox" class="exercise" value="yoga"> Yoga</label>
 
-            <label for="targetWeight">Target Weight (kg)</label>
-            <input type="number" id="targetWeight" placeholder="Enter target weight">
+            <label><input type="checkbox" class="exercise" value="strength_training"> Strength Training</label>
 
-        </section>
+            <label><input type="checkbox" class="exercise" value="cycling"> Cycling</label>
 
-        <!-- ANALYSIS BUTTON -->
+            <label><input type="checkbox" class="exercise" value="swimming"> Swimming</label>
 
-        <section>
+            <label><input type="checkbox" class="exercise" value="zumba"> Zumba</label>
 
-            <h2>📊 Health Analysis</h2>
+        </div>
 
-            <button id="calculateHealthBtn">
-                Generate My Health Plan
-            </button>
+        <label for="foodPreference">Food Preference</label>
+        <select id="foodPreference">
+            <option value="">Select Preference</option>
+            <option value="veg">Vegetarian</option>
+            <option value="eggetarian">Eggetarian</option>
+            <option value="nonveg">Non-Vegetarian</option>
+            <option value="vegan">Vegan</option>
+        </select>
 
-        </section>
+        <label for="sleepHours">Sleep Hours Per Day</label>
+        <input type="number" id="sleepHours" min="1" max="24" placeholder="Enter sleep hours">
 
-        <!-- RESULTS -->
+        <label for="workoutDays">Workout Days Per Week</label>
+        <input type="number" id="workoutDays" min="0" max="7" placeholder="0-7">
 
-        <section>
+    </section>
 
-            <h2>📈 Health Results</h2>
+    <!-- GOAL TRACKING -->
 
-            <div class="health-results">
+    <section>
 
-                <div class="result-card">
-                    <h3>BMI</h3>
-                    <p id="bmiResult">--</p>
-                </div>
+        <h2>🎯 Goal Tracking</h2>
 
-                <div class="result-card">
-                    <h3>BMI Status</h3>
-                    <p id="bmiStatus">--</p>
-                </div>
+        <label for="targetWeight">Target Weight (kg)</label>
+        <input type="number" id="targetWeight" placeholder="Enter target weight">
 
-                <div class="result-card">
-                    <h3>BMR</h3>
-                    <p id="bmrResult">--</p>
-                </div>
+    </section>
 
-                <div class="result-card">
-                    <h3>Daily Calories</h3>
-                    <p id="recommendedCalories">--</p>
-                </div>
+    <!-- HEALTH ANALYSIS -->
 
-                <div class="result-card">
-                    <h3>Protein</h3>
-                    <p id="recommendedProtein">--</p>
-                </div>
+    <section>
 
-                <div class="result-card">
-                    <h3>Carbs</h3>
-                    <p id="recommendedCarbs">--</p>
-                </div>
+        <h2>📊 Health Analysis</h2>
 
-                <div class="result-card">
-                    <h3>Fat</h3>
-                    <p id="recommendedFat">--</p>
-                </div>
+        <button id="calculateHealthBtn">
+            Generate My Health Plan
+        </button>
 
-            </div>
+    </section>
 
-        </section>
+    <!-- HEALTH RESULTS -->
 
-        <!-- WATER -->
+    <section>
 
-        <section>
+        <h2>📈 Health Results</h2>
 
-            <h2>💧 Water Intake Recommendation</h2>
+        <div class="health-results">
 
             <div class="result-card">
-                <p id="waterIntake">-- Litres/day</p>
+                <h3>BMI</h3>
+                <p id="bmiResult">--</p>
             </div>
-
-        </section>
-
-        <!-- DIET PLAN -->
-
-        <section>
-
-            <h2>🥗 Personalized Diet Plan</h2>
-
-            <div id="dietPlan">
-
-                <p>Your diet recommendations will appear here.</p>
-
-            </div>
-
-        </section>
-
-        <!-- WORKOUT PLAN -->
-
-        <section>
-
-            <h2>🏋️ Personalized Workout Plan</h2>
-
-            <div id="workoutPlan">
-
-                <p>Your workout recommendations will appear here.</p>
-
-            </div>
-
-        </section>
-
-        <!-- PROGRESS -->
-
-        <section>
-
-            <h2>📉 Progress Tracker</h2>
 
             <div class="result-card">
-                <p id="progressResult">--</p>
+                <h3>BMI Status</h3>
+                <p id="bmiStatus">--</p>
             </div>
 
-        </section>
+            <div class="result-card">
+                <h3>Ideal Weight</h3>
+                <p id="idealWeight">--</p>
+            </div>
 
-    </div>
+            <div class="result-card">
+                <h3>BMR</h3>
+                <p id="bmrResult">--</p>
+            </div>
 
-    <script src="script.js"></script>
+            <div class="result-card">
+                <h3>Daily Calories</h3>
+                <p id="recommendedCalories">--</p>
+            </div>
+
+            <div class="result-card">
+                <h3>Protein</h3>
+                <p id="recommendedProtein">--</p>
+            </div>
+
+            <div class="result-card">
+                <h3>Carbs</h3>
+                <p id="recommendedCarbs">--</p>
+            </div>
+
+            <div class="result-card">
+                <h3>Fat</h3>
+                <p id="recommendedFat">--</p>
+            </div>
+
+            <div class="result-card">
+                <h3>Health Score</h3>
+                <p id="healthScore">--</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- NUTRITION CHART -->
+
+    <section>
+
+        <h2>📊 Nutrition Chart</h2>
+
+        <canvas id="nutritionChart"></canvas>
+
+    </section>
+
+    <!-- WATER -->
+
+    <section>
+
+        <h2>💧 Water Intake Recommendation</h2>
+
+        <div class="result-card">
+            <p id="waterIntake">-- Litres/day</p>
+        </div>
+
+    </section>
+
+    <!-- DIET PLAN -->
+
+    <section>
+
+        <h2>🥗 Personalized Diet Plan</h2>
+
+        <div id="dietPlan">
+            <p>Your personalized diet plan will appear here.</p>
+        </div>
+
+    </section>
+
+    <!-- WORKOUT PLAN -->
+
+    <section>
+
+        <h2>🏋️ Personalized Workout Plan</h2>
+
+        <div id="workoutPlan">
+            <p>Your workout recommendations will appear here.</p>
+        </div>
+
+    </section>
+
+    <!-- LIFESTYLE RECOMMENDATIONS -->
+
+    <section>
+
+        <h2>🌟 Lifestyle Recommendations</h2>
+
+        <div id="lifestyleTips">
+            <p>Your lifestyle suggestions will appear here.</p>
+        </div>
+
+    </section>
+
+    <!-- PROGRESS TRACKER -->
+
+    <section>
+
+        <h2>📉 Progress Tracker</h2>
+
+        <div class="result-card">
+            <p id="progressResult">--</p>
+        </div>
+
+    </section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
