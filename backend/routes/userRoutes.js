@@ -1,3 +1,4 @@
+```javascript
 const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
@@ -44,7 +45,6 @@ router.delete("/:id", async (req, res) => {
       success: true,
       message: "Report deleted successfully"
     });
-
   } catch (error) {
     res.status(500).json({
       success: false,
@@ -52,4 +52,6 @@ router.delete("/:id", async (req, res) => {
     });
   }
 });
+
 module.exports = router;
+```
